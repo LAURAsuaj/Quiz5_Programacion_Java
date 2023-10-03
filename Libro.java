@@ -10,7 +10,7 @@ public class Libro {
         this.numeroPaginas = numeroPaginas;
     }
 
-    public void setTitulo(String titulo) {
+    public void setTitulo() {
         this.titulo = titulo;
     }
 
@@ -33,4 +33,5 @@ public class Libro {
     public int getNumeroPaginas() {
         return numeroPaginas;
     }
+
 }
