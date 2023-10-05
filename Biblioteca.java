@@ -1,55 +1,42 @@
+/**
+ * Importar libreria de listas
+ */
 import java.util.LinkedList;
-import java.util.Scanner;
 
 public class Biblioteca {
+    /**
+     * Complejidadtemporal:O(1)Tiempoconstante.
+     */
+
     private LinkedList<Libro> librosDisponibles = new LinkedList<>();
 
     public void registrarLibro(Libro libro) {
-
-       librosDisponibles.add(libro);
+        librosDisponibles.add(libro);
     }
+
+    /**
+     * Complejidadlineal:O(N)Tiempolineal.
+     *
+     * @param titulo
+     * @return
+     */
     public Libro buscarLibro(String titulo) {
-        Scanner en= new Scanner(System.in);
-
-        Libro[] aux= b.buscar(titulo);
-        if (aux != null){
-            for (Libro aux1 : aux) {
-                System.out.println(aux1.ToString());
+        for (int i = 0; i < librosDisponibles.size(); i++) {
+            Libro libroBuscado = librosDisponibles.get(i);
+            if (libroBuscado.getTitulo().equals(titulo)) {
+                return libroBuscado;
             }
-        }else{
-            System.out.println("No esxisten libros con ese titulo");
         }
+        return null;
+    }
 
-        que llama a la funcion buecar de la clase biblioteca y le pasa el titulo a buscar.
-
-
-
-        public Libro[] buscar( String titulo){
-            int j=0;
-            Libro librosBuscados[]=new Libro [libros.length];
-
-            for (int i=0; i<libros.length;i++){
-
-                if(libros[i].getTitulo().equals(titulo)){
-
-                    librosBuscados[j]=new Libro(libros[i].getTitulo(),
-                            libros[i].getAutor(),libros[i].isDisponible());
-                    j++;
-                }
-
-
-            }
-
-
-
-
-            return librosBuscados;
-
-
-        }
-
+    /**
+     * Complejidadtemporal:O(1)Tiempoconstante.
+     *
+     * @return
+     */
     public LinkedList<Libro> mostrarLibrosDisponibles() {
         return librosDisponibles;
+
     }
 }
-

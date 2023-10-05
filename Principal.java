@@ -1,4 +1,8 @@
 public class Principal {
+    /**
+     * Complejidadtemporal:O(1)Tiempoconstante.
+     */
+
     public static void main(String[] args) {
         Biblioteca bibliotecaKonradLorenz = new Biblioteca();
 
@@ -12,11 +16,5 @@ public class Principal {
         bibliotecaKonradLorenz.registrarLibro(Hobbit);
         Libro laodisea= new Libro("La Odisea", "Homero", 448);
         bibliotecaKonradLorenz.registrarLibro(laodisea);
-
-        System.out.println("Ingresa el nombre del libro para buscarlo");
-
-        System.out.println(bibliotecaKonradLorenz.mostrarLibrosDisponibles().get());
-        System.out.println(cienAnosSoledad.getTitulo());
-        System.out.println(cienAnosSoledad.getNumeroPaginas());
     }
 }
